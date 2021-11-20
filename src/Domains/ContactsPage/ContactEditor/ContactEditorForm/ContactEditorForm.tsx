@@ -80,6 +80,7 @@ export default ContactEditorForm;
 
 const Form = styled.form`
   display: grid;
+  padding-top: 10px;
   gap: 10px;
   grid-template: 1fr / max-content
 `;
