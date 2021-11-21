@@ -1,46 +1,62 @@
-# Getting Started with Create React App
+# 1. Установить все пакеты
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### `npm i`
 
-## Available Scripts
+# 2. Установить json-server
 
-In the project directory, you can run:
+### `npm install -g json-server`
+
+# 3. Запустить
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `json-server --port 3002 --watch db.json`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Открыть в браузере [http://localhost:3000](http://localhost:3000).
 
-### `npm test`
+***
+# 1. Вход 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Логин: `testuser`
 
-### `npm run build`
+Пароль: `123412345Test`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ - При вводе данных несуществующего пользователя
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+https://user-images.githubusercontent.com/33350605/142779318-80dcddc2-b45b-4ece-b9c0-2d1bc399228d.mp4
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+ - При правильных данных
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+https://user-images.githubusercontent.com/33350605/142779393-8e4c0859-ded9-4aa1-ba50-9ae361abd7e9.mp4
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+# 2. Список контактов (генерируются при помощи faker.js)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+https://user-images.githubusercontent.com/33350605/142779417-9305119f-57f0-47f1-a8ee-9167c4175d81.mp4
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+# 3. Удаление контактов
+
+https://user-images.githubusercontent.com/33350605/142779440-de363ed0-087d-44a6-9c75-9b74e801fea6.mp4
+
+
+# 4. Добавление контакта
+
+https://user-images.githubusercontent.com/33350605/142779496-8ea6cab6-0f0d-4e37-8ecc-d8e16649085e.mp4
+
+
+# 5. Редактирование контакта
+
+https://user-images.githubusercontent.com/33350605/142779499-f9b567f9-686a-41ad-ae15-f89a4d96d091.mp4
+
+
+# 6. Поиск контакта (по имени)
+
+https://user-images.githubusercontent.com/33350605/142779519-6a0cf02a-2568-4914-bd12-6a28bb3945f8.mp4
+
+
+
+
