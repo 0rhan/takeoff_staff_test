@@ -1,4 +1,4 @@
-import { Backdrop, CircularProgress, Container } from "@mui/material";
+import { Container } from "@mui/material";
 import generateRandomContactsList from "Data/Contacts/generateRandomContactsList";
 import { useContext, useEffect } from "react";
 import { ContactsContext } from "State/Contexts/ContactsContext";
@@ -9,8 +9,6 @@ import ContactsList from "./ContactsList/ContactsList";
 
 const ContactsPage = () => {
   const {
-    isLoading,
-    setIsLoading,
     contactsList,
     foundContactsList,
     setContactsList,
@@ -19,23 +17,12 @@ const ContactsPage = () => {
   } = useContext(ContactsContext);
 
   useEffect(() => {
-    const getContacts = async () => {
-      setIsLoading(true);
-      const contacts = await generateRandomContactsList(8);
-      setIsLoading(false);
-      if (contacts) {
-        setContactsList(contacts);
-      }
-    };
-
-    getContacts();
-  }, [setContactsList, setIsLoading]);
+    const contacts = generateRandomContactsList(10);
+    setContactsList(contacts);
+  }, [setContactsList]);
 
   return (
     <>
-      <Backdrop open={isLoading} sx={{ zIndex: 1 }}>
-        <CircularProgress color="primary" />
-      </Backdrop>
       <ContactsToolBar />
       <Container sx={{ display: "grid", paddingTop: "60px" }}>
         <ContactEditor />
