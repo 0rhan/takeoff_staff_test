@@ -1,15 +1,28 @@
-import generateRandomPerson from "./generateRandomPerson";
+import getRandomPerson from "./generateRandomPerson";
 import { PersonModel } from "./types";
 
-const generateRandomContactsList = (amount: number) => {
-  let contactsList: Array<PersonModel> = [];
-  for (let i = 0; i !== amount; i++) {
-    const randomPerson = generateRandomPerson();
-
-    contactsList.push(randomPerson);
+async function* asyncContactsGenerator(quantity: number) {
+  for (let i = 0; i < quantity; ) {
+    i++;
+    const randomPerson = await getRandomPerson();
+    yield randomPerson;
+    if (i === quantity) {
+      // Индикатор окончания генератора
+      yield { done: true };
+    }
   }
+}
 
-  return contactsList;
+const generateRandomContactsList = async (quantity: number) => {
+  let contactsList: Array<PersonModel> = [];
+  for await (let randomPerson of asyncContactsGenerator(quantity)) {
+
+    if (!("done" in randomPerson)) {
+      contactsList.push(randomPerson);
+    } else {
+      return contactsList;
+    }
+  }
 };
 
 export default generateRandomContactsList;

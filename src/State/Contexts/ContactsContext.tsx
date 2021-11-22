@@ -15,7 +15,9 @@ interface ContactsProviderType {
   foundContactsList: ContactsListType | undefined;
   setFoundContactsList: Dispatch<SetStateAction<ContactsListType | undefined>>;
   isOpen: boolean;
+  isLoading: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
+  setIsLoading: Dispatch<SetStateAction<boolean>>;
   currentPerson: PersonModel | undefined;
   setCurrentPerson: Dispatch<SetStateAction<PersonModel | undefined>>;
   editorMode: "EDIT" | "ADD";
@@ -30,6 +32,9 @@ const ContactsProvider = ({ children }: { children: ReactNode }) => {
 
   const [isOpen, setIsOpen] = useState(false);
 
+
+  const [isLoading, setIsLoading] = useState(true)
+
   const [currentPerson, setCurrentPerson] = useState<PersonModel | undefined>();
 
   const [editorMode, setEditorMode] = useState<"EDIT" | "ADD">("EDIT");
@@ -40,6 +45,8 @@ const ContactsProvider = ({ children }: { children: ReactNode }) => {
     setContactsList,
     setFoundContactsList,
     isOpen,
+    isLoading,
+    setIsLoading,
     setIsOpen,
     currentPerson,
     setCurrentPerson,
