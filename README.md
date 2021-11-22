@@ -29,8 +29,7 @@ https://user-images.githubusercontent.com/33350605/142779318-80dcddc2-b45b-4ece-
 
  - При правильных данных
 
-https://user-images.githubusercontent.com/33350605/142779393-8e4c0859-ded9-4aa1-ba50-9ae361abd7e9.mp4
-
+https://user-images.githubusercontent.com/33350605/142859102-8d481367-9a5f-473d-ba15-438ba474867a.mp4
 
 
 # 2. Список контактов (генерируются при помощи faker.js)
