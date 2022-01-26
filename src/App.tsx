@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import EntrancePage from "./Domains/EntrancePage/EntrancePage";
-import ContactsPage from "./Domains/ContactsPage/ContactsPage";
-import ContactsProvider from "State/Contexts/ContactsContext";
+import EntrancePage from "features/authentication/EntrancePage";
+import ContactsPage from "features/contacts/ContactsPage";
+import ContactsProvider from "providers/ContactsContext";
 import "sanitize.css";
 import "sanitize.css/forms.css";
 import "sanitize.css/typography.css";
@@ -10,8 +10,8 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import "./index.css";
-import AuthProvider from "State/Contexts/AuthContext";
-import RequireAuth from "UtilityComponents/RequireAuth";
+import AuthProvider from "providers/AuthContext";
+import RequireAuth from "features/authentication/components/RequireAuth";
 
 function App() {
   return (
